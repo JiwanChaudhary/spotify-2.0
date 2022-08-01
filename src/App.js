@@ -1,9 +1,10 @@
+import { Box, Typography } from "@mui/material";
 
 function App() {
   return (
-    <div>
-      <h1>The Spotify starts here!</h1>
-    </div>
+    <Box>
+      <Typography variant="h1">Material UI Added</Typography>
+    </Box>
   );
 }
 
