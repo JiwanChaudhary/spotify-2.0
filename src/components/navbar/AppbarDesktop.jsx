@@ -1,21 +1,38 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, Tabs, Tab, Box } from "@mui/material";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Tabs,
+  Tab,
+  Box,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 import { Colors } from "../../styles/theme";
 import { NavbarContainer, ProductImage } from "../../styles/navbar";
 
 const navItems = ["Premium", "Support", "Download", "Sign Up", "Log in"];
 
 const AppbarDesktop = () => {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("lg"));
   return (
     <NavbarContainer>
       <AppBar
         position={"static"}
-        sx={{ m: 0, background: Colors.black, padding: "5px 100px" }}
+        sx={{
+          m: 0,
+          background: Colors.black,
+          padding: matches ? "5px 100px" : "5px 60px",
+        }}
       >
         <Toolbar>
-          <Box display={"flex"}  alignItems={"center"}>
+          <Box display={"flex"} alignItems={"center"}>
             <ProductImage src="/images/lo.png" alt="logo" />
-            <Typography variant="h4" sx={{cursor: 'pointer'}}>Spotify</Typography>
+            <Typography variant="h4" sx={{ cursor: "pointer" }}>
+              Spotify
+            </Typography>
           </Box>
           <Tabs sx={{ ml: "auto" }} textColor="inherit" centered>
             {navItems.map((item) => (
