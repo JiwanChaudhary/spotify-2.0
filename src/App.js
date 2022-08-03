@@ -5,32 +5,34 @@ import Container from "./components/container";
 import Faq from "./components/faq";
 import Footer from "./components/footer";
 import Support from "./pages/support";
-import { Box } from "@mui/material";
-import "./GlobalStyle.css"; 
+import "./GlobalStyle.css";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    document.title = "Spotify 2.0";
+  }, []);
+
   return (
     <>
-      <Box sx={{ ml: "130px", mr: "130px" }}>
-        <BrowserRouter>
-          <Navbar />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Home />
-                  <Container />
-                  <Faq />
-                </>
-              }
-            />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Home />
+                <Container />
+                <Faq />
+              </>
+            }
+          />
 
-            <Route path="/support" element={<Support />} />
-          </Routes>
-          <Footer />
-        </BrowserRouter>
-      </Box>
+          <Route path="/support" element={<Support />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
