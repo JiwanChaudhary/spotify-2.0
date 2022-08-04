@@ -7,6 +7,10 @@ import Footer from "./components/footer";
 import Support from "./pages/support";
 import "./GlobalStyle.css";
 import { useEffect } from "react";
+import { UIProvider } from "./context";
+import { ThemeProvider } from "@mui/system";
+import theme from "./styles/theme";
+import AppbarDrawer from "./components/drawer";
 
 function App() {
   useEffect(() => {
@@ -16,7 +20,9 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
+      <ThemeProvider theme={theme}>
+      <UIProvider>
+       <Navbar />
         <Routes>
           <Route
             path="/"
@@ -25,6 +31,7 @@ function App() {
                 <Home />
                 <Container />
                 <Faq />
+                <AppbarDrawer />
               </>
             }
           />
@@ -32,6 +39,8 @@ function App() {
           <Route path="/support" element={<Support />} />
         </Routes>
         <Footer />
+       </UIProvider>
+      </ThemeProvider>
       </BrowserRouter>
     </>
   );

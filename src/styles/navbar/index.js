@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
 import { styled } from "@mui/system";
 import { Colors } from "../theme";
 
@@ -11,12 +11,24 @@ export const NavbarContainer = styled(Box)(() => ({
     width: "100%",
 
 }));
-export const ProductImage = styled("img")(({ src }) => ({
+export const ProductImage = styled("img")(({ src, theme }) => ({
     src: `url(${src})`,
     width: "60px",
     height: '60px',
     marginRight: '10px',
     cursor: 'pointer',
+    [theme.breakpoints.down('md')]:{
+      width: "50px",
+      height: '50px', 
+    }
+  }));
+
+  export const DrawerCloseButton = styled(IconButton)(() => ({
+    position: 'absolute',
+    top: 15,
+    right: '30px',
+    color: Colors.white,
+    zIndex: 1999,
   }));
 
 // header

@@ -1,78 +1,37 @@
-import {
-  Box,
-  Divider,
-  Drawer,
-  IconButton,
-  List,
-  ListItemButton,
-  ListItemText,
-  Typography,
-} from "@mui/material";
-import { styled } from "@mui/system";
-import React, { useState } from "react";
-import { ProductImage } from "../../styles/navbar";
+import { Box, IconButton, Typography } from "@mui/material";
+import React from "react";
+import { useUIContext } from "../../context";
+import { NavbarContainer, ProductImage } from "../../styles/navbar";
 import { Colors } from "../../styles/theme";
-import CloseIcon from "@mui/icons-material/Close";
-
-const MiddleDivider = styled((props) => (
-  <Divider variant="middle" {...props} />
-))``;
+import MenuIcon from "@mui/icons-material/Menu";
 
 const AppbarMobile = () => {
-  const [showDrawer, setShowDrawer] = useState(false);
+  const { setShowDrawer } = useUIContext();
+  
 
   return (
-    <>
-      {showDrawer && (
-        <IconButton sx={{ position: "absolute", top: "60px", right: "320px", color: Colors.black }}>
-          <CloseIcon />
-        </IconButton>
-      )}
-      <Drawer
-        open={true}
-        anchor="right"
-        PaperProps={{
-          sx: { width: "300px", background: Colors.black, color: Colors.white },
-        }}
+    <NavbarContainer sx={{ background: Colors.black, width: "100%" }}>
+      <Box
+        sx={{ ml: "30px", pt: "10px", pb: "10px" }}
+        display="flex"
+        alignItems="center"
       >
-        <List>
-          <ListItemButton>
-            <ListItemText>Premium</ListItemText>
-          </ListItemButton>
-          <ListItemButton>
-            <ListItemText>Support</ListItemText>
-          </ListItemButton>
-          <ListItemButton>
-            <ListItemText>Download</ListItemText>
-          </ListItemButton>
-          <MiddleDivider
-            textAlign="left"
-            sx={{ width: "20px", height: "2px" ,background: Colors.white, fontWeight: "bold" }}
-          />
-          <ListItemButton>
-            <ListItemText>Sign Up</ListItemText>
-          </ListItemButton>
-
-          <ListItemButton>
-            <ListItemText>Log in</ListItemText>
-          </ListItemButton>
-        </List>
-        <Box
-          display={"flex"}
-          alignItems={"center"}
-          sx={{ position: "absolute", bottom: 10, left: 10 }}
+        <ProductImage src="/images/lo.png" alt="logo" />
+        <Typography
+          color={Colors.white}
+          variant="h5"
+          sx={{ cursor: "pointer" }}
         >
-          <ProductImage
-            src="/images/lo.png"
-            alt="logo"
-            sx={{ width: 30, height: 30 }}
-          />
-          <Typography variant="h6" sx={{ cursor: "pointer" }}>
-            Spotify
-          </Typography>
-        </Box>
-      </Drawer>
-    </>
+          Spotify
+        </Typography>
+      </Box>
+      <IconButton
+        sx={{ color: Colors.white, mr: "30px" }}
+        onClick={() => setShowDrawer(true)}
+      >
+        <MenuIcon />
+      </IconButton>
+    </NavbarContainer>
   );
 };
 
