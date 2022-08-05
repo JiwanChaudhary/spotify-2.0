@@ -36,7 +36,6 @@ const AppbarDrawer = () => {
             width: "350px",
             background: Colors.black,
             color: Colors.white,
-            mt: "25px",
           },
         }}
         onClose={() => setShowDrawer(false)}
@@ -46,7 +45,11 @@ const AppbarDrawer = () => {
             <ListItemText>
               <Typography
                 variant="h4"
-                sx={{ "&:hover": { color: Colors.green }, transition: "0.3s" }}
+                sx={{
+                  "&:hover": { color: Colors.green },
+                  transition: "0.3s",
+                  mt: "35px",
+                }}
               >
                 Premium
               </Typography>
@@ -87,7 +90,11 @@ const AppbarDrawer = () => {
             <ListItemText>
               <Typography
                 variant="h6"
-                sx={{ "&:hover": { color: Colors.green }, transition: "0.3s" }}
+                sx={{
+                  "&:hover": { color: Colors.green },
+                  transition: "0.3s",
+                  opacity: 0.9,
+                }}
               >
                 Sign Up
               </Typography>
@@ -98,7 +105,11 @@ const AppbarDrawer = () => {
             <ListItemText>
               <Typography
                 variant="h6"
-                sx={{ "&:hover": { color: Colors.green }, transition: "0.3s" }}
+                sx={{
+                  "&:hover": { color: Colors.green },
+                  transition: "0.3s",
+                  opacity: 0.9,
+                }}
               >
                 Log in
               </Typography>
@@ -108,14 +119,21 @@ const AppbarDrawer = () => {
         <Box
           display={"flex"}
           alignItems={"center"}
-          sx={{ position: "absolute", bottom: 40, left: 10 }}
+          sx={{ position: "absolute", bottom: 20, left: 10 }}
         >
           <ProductImage
             src="/images/lo.png"
             alt="logo"
             sx={{ width: 30, height: 30 }}
           />
-          <Typography variant="h6" sx={{ cursor: "pointer" }}>
+          <Typography
+            variant="h6"
+            sx={{
+              cursor: "pointer",
+              transition: "0.3s",
+              "&:hover": { color: Colors.green },
+            }}
+          >
             Spotify
           </Typography>
         </Box>
