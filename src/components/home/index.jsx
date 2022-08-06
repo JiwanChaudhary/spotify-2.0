@@ -25,7 +25,7 @@ const Home = () => {
         display="flex"
         alignItems="center"
       >
-        <MainImage src="/images/mobile.jpg" alt="Spotify" sx={{ mr: "30px" }} />
+        <MainImage src="/images/mobile.jpg" alt="Spotify" sx={{ mr: "100px" }} />
         <HomeTitleContainer>
           <HomeTitle variant="h2">
             Play millions of songs and podcasts, for free.
