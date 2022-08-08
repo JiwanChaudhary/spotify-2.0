@@ -3,6 +3,9 @@ import { useTheme } from "@mui/material/styles";
 import React from "react";
 import {
   BoxWrapper,
+  ContainerTwoTitleOne,
+  ContainerTwoTitleTwo,
+  ContainerTwoWrapper,
   ContainerWrapper,
   Description,
   DescriptionBox,
@@ -37,7 +40,7 @@ const Container = () => {
                 <DescriptionTitle variant="h6">
                   Play your Favourites.
                 </DescriptionTitle>
-                <Description variant="body1" align="center">
+                <Description variant="body1" align={matches ? "left" : "center"}>
                   Listen to the songs you love, and discover new music and
                   podcasts.
                 </Description>
@@ -53,7 +56,7 @@ const Container = () => {
                 <DescriptionTitle variant="h6">
                   Playlists made easy.
                 </DescriptionTitle>
-                <Description variant="body1" align="center">
+                <Description variant="body1" align={matches ? "left" : "center"}>
                   We'll help you make playlists. Or enjoy playlists made by
                   music experts.
                 </Description>
@@ -67,7 +70,7 @@ const Container = () => {
               />
               <DescriptionBox>
                 <DescriptionTitle variant="h6">Make it yours.</DescriptionTitle>
-                <Description variant="body1" align="center">
+                <Description variant="body1" align={matches ? "left" : "center"}>
                   Tell us what you like, and we'll recommend music for you.
                 </Description>
               </DescriptionBox>
@@ -82,7 +85,7 @@ const Container = () => {
                 <DescriptionTitle variant="h6">
                   Save mobile data.
                 </DescriptionTitle>
-                <Description variant="body1" align="center">
+                <Description variant="body1" align={matches ? "left" : "center"}>
                   To use less data when you play music, turn on Data Saver in
                   Settings.
                 </Description>
@@ -91,6 +94,10 @@ const Container = () => {
           </Grid>
         </BoxWrapper>
       </ContainerWrapper>
+      <ContainerTwoWrapper>
+        <ContainerTwoTitleOne variant={matches ? 'h3' : 'h2'} align="center">It's free.</ContainerTwoTitleOne>
+        <ContainerTwoTitleTwo variant={matches ? 'h3' : 'h2'} align="center">No credit card required.</ContainerTwoTitleTwo>
+      </ContainerTwoWrapper>
     </>
   );
 };
