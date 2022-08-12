@@ -15,6 +15,9 @@ export const AccordianTitle = styled(Typography)(() => ({
 }));
 
 export const AccordionContent = styled(Accordion)(() => ({
+    '& .Mui-expanded': {
+        margin: 0,
+    },
     width: '100%',
     padding: '15px',
     marginBottom: 0,
@@ -24,12 +27,10 @@ export const AccordionContent = styled(Accordion)(() => ({
 export const AccordionContentSummary = styled(AccordionSummary)(() => ({
     '&:hover':{
         background: "#f5f5f5",
+        textDecoration: 'underline',
     },
 }));
 
 export const AccordionTypography = styled(Typography)(() => ({
     fontWeight: '500',
-    '&:hover':{
-        textDecoration: 'underline',
-    },
 }));
