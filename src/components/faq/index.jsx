@@ -125,10 +125,15 @@ const Faq = () => {
               </AccordionTypography>
             </AccordionContentSummary>
             <AccordionDetails>
-              <Typography sx={{ mt: "20px" }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
+              <Typography
+                variant="body1"
+                sx={{ mt: "20px", mb: "10px", fontWeight: 500 }}
+              >
+                Any playlist with the shuffle icon will play on shuffle.
+              </Typography>
+              <Typography variant="body1" sx={{ fontWeight: 500 }}>
+                Some playlists won't have the shuffle icon, so you can tap any
+                song to play it.
               </Typography>
             </AccordionDetails>
           </AccordionContent>
@@ -143,10 +148,22 @@ const Faq = () => {
               </AccordionTypography>
             </AccordionContentSummary>
             <AccordionDetails>
-              <Typography sx={{ mt: "20px" }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
+              <Typography sx={{ mt: "20px", fontWeight: 500 }}>
+                Tap{" "}
+                <Typography
+                  component="span"
+                  sx={{ fontWeight: 500, color: "RGB(17, 122, 55)" }}
+                >
+                  Search.{" "}
+                </Typography>
+                Under{" "}
+                <Typography
+                  component="span"
+                  sx={{ fontWeight: 500, color: "RGB(17, 122, 55)" }}
+                >
+                  Browse All
+                </Typography>
+                , tap Podcasts.
               </Typography>
             </AccordionDetails>
           </AccordionContent>
