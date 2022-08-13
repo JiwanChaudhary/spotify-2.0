@@ -9,6 +9,7 @@ import {
   AccordionTypography,
 } from "../../styles/faq";
 import { BoxWrapper } from "../../styles/container";
+import LetsPlay from "./LetsPlay";
 
 const Faq = () => {
   return (
@@ -169,6 +170,7 @@ const Faq = () => {
           </AccordionContent>
         </BoxWrapper>
       </AccordianWrapper>
+      <LetsPlay />
     </>
   );
 };
