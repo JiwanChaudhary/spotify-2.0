@@ -24,7 +24,7 @@ const Faq = () => {
           }}
         >
           <AccordianTitle variant="h3">Got Questions?</AccordianTitle>
-          <AccordionContent sx={{ width: "100%" }}>
+          <AccordionContent sx={{ width: "100%" }} disableGutters>
             <AccordionContentSummary expandIcon={<ExpandMoreIcon />}>
               <AccordionTypography variant="h6">
                 How do I create a playlist?
@@ -67,7 +67,7 @@ const Faq = () => {
               </Typography>
             </AccordionDetails>
           </AccordionContent>
-          <AccordionContent>
+          <AccordionContent disableGutters>
             <AccordionContentSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel2a-content"
@@ -115,7 +115,7 @@ const Faq = () => {
               </Typography>
             </AccordionDetails>
           </AccordionContent>
-          <AccordionContent>
+          <AccordionContent disableGutters>
             <AccordionContentSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel2a-content"
@@ -138,7 +138,7 @@ const Faq = () => {
               </Typography>
             </AccordionDetails>
           </AccordionContent>
-          <AccordionContent>
+          <AccordionContent disableGutters>
             <AccordionContentSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel2a-content"
