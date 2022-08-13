@@ -23,9 +23,14 @@ const Home = () => {
           height: matches ? "376px" : "600px",
         }}
         display="flex"
+        justifyContent={"center"}
         alignItems="center"
       >
-        <MainImage src="/images/mobile.jpg" alt="Spotify" sx={{ mr: "100px" }} />
+        <MainImage
+          src="/images/mobile.jpg"
+          alt="Spotify"
+          sx={{ mr: "100px" }}
+        />
         <HomeTitleContainer>
           <HomeTitle variant="h2">
             Play millions of songs and podcasts, for free.
@@ -33,7 +38,10 @@ const Home = () => {
           <HomeButton
             variant="contained"
             sx={{
-              "&:hover": { background: Colors.white, transform: "scale(1.1)" },
+              "&:hover": {
+                background: Colors.white,
+                transform: "scale(1.1)",
+              },
               transition: "0.4s",
               mt: "20px",
             }}

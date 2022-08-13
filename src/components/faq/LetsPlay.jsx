@@ -17,8 +17,6 @@ const LetsPlay = () => {
       <Box
         component="article"
         sx={{
-          mt: matches ? "30px" : "100px",
-          mb: matches ? "30px" : "100px",
           pt: matches ? "90px" : "200px",
           pb: matches ? "90px" : "200px",
           display: "flex",
