@@ -7,6 +7,7 @@ export const Colors = {
     black: "#000000",
     white: "#FFFFFF",
     green: '#1ED760',
+    smokeWhite: '#F5F5F5',
 }
 
 const theme = createTheme({
